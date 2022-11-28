@@ -1,0 +1,14 @@
+pre.highlight {
+  &>button {
+    opacity: .7;
+
+    &:active,
+    &:focus {
+      opacity: 1;
+    }
+  }
+
+  &:hover>button {
+    opacity: 1;
+  }
+}

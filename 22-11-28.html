@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="" href="">
+  <meta name="description" content="Curso de HTML-JS-CSS">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  <!-- CSS del proyecto -->
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <title>LUNES</title>
+</head>
+
+<body>
+  <header></header>
+  <nav></nav>
+  <main></main>
+  <footer></footer>
+
+  <style>
+    script {
+      white-space: pre-wrap;
+      /* pre-line funciona pero pre-wrap le da una indentación, se ve más ordenado*/
+      color: rgb(49, 20, 236);
+    }
+  </style>
+
+  <script style="display:block;" contenteditable="true">
+    //Para tener mayor orden y a la vez evitar errores, las variables se inicializan (o declaran?) todas al inicio. Es decir mencionas que existen aunque puede que obtengas sus valores mucho después.
+
+    //Por ejemplo:
+    let numero1 = 7;
+    let numero2 = 8;
+    let suma; //no tiene un valor pero lo inicializamos porque va a adquirir un valor más tarde
+
+    //También, si son de un mismo tipo o están relacionadas podrías declararlas de esta manera:
+    let frutaA = 'manzana', frutaB = 'lúcuma', frutaC = 'pera';
+
+    function sumaymuestra() { //esta es una función sin parámetros
+      //variables:
+      //proceso:
+      suma = numero1 + numero2;
+      //salida:
+      console.log(`la suma de ${numero1} y ${numero2} es ${suma}`);
+    } // El código que escribes dentro de los corchetes de una función no se activa o no actúa hasta que 'llames a la función'.
+    //Para hacer esto puedes abrir y escribir en la consola:  sumaymuestra()    o colocar sumaymuestra() en ualquier parte de tu script que esté fuera de los corchetes de la función, por ejemplo aquí:
+    sumaymuestra(); // 7+8
+
+    //Si la variable es de tipo let o var, su valor puede cambiar, por ejemplo ahora numero2 va a valer 11:
+    numero2 = 11;
+    sumaymuestra(); // entonces 7+11 
+
+    //Como ya inicializaste la variable ya no usas let:
+    //let numero2 = 11; //<--esto hubiera generado un error que puedes ver en al consola "Uncaught SyntaxError: redeclaration of let numero2" (y el codigo ya no funciona apartir de esa línea de código que está generando el error)
+
+    //Eso sucede con las variables de tipo let, en cambio si fuera un var:
+    var fruta = 'manzana';
+    var fruta = 'mandarina'; //aqui tambien has redeclarado pero no te envía ningún aviso o error. Esto es lo peligroso de usar var. Cuando tienes varios archivos o trabajas entre varias personas pueden acabar redeclarando valores. Por eso es recomendable usar let o de lo contrario, recordar todos los nombres de las variables tipo var que use el proyecto.
+    console.log({ fruta });
+
+
+    //FUNCIONES que incluye javascript:
+
+    //isNaN() <--te devuelve 'true' si el valor dentro de sus paréntesis es un NaN (not a number, un no número, por ejemplo un texto). Y te devuelve 'false' si es un número
+
+    console.log(isNaN(numero2)); //numero2 es NaN? false
+    console.log(isNaN('un texto')); //'un texto' es NaN? true
+
+    let pato = null;
+    let gato = undefined;
+    console.log(isNaN(pato)); //si una variable es null, también devuelve false
+    console.log(isNaN(gato)); //si una variable es undefined, devuelve true
+
+
+    let unaFuncion = (numero1, numero2) => console.log(`soy una función?, la suma de ${numero1} y ${numero2} es ${suma}`);
+
+
+
+
+
+  </script>
+
+</body>
+
+</html>
